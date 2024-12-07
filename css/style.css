@@ -1,0 +1,384 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin:0;
+  background-color: #2F2F2F;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Arial, Helvetica, sans-serif;
+}
+a, li, figcaption{
+  font-family: "DM Sans", sans-serif;
+} 
+
+/*Desktop View*/
+header{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  /*controlling the logo*/
+  left: 20px;
+  top: 12px;
+  background-color: BLACK;
+  border-radius: 10PX;
+  /*controlling overall width but specifically the nav*/
+  width: 98%;
+  height: 80px;
+  z-index: 9999;
+  transition: all .25s linear;
+}
+header div{
+  display: flex;
+  align-items: center; /* Ensures child elements, including the img, are vertically centered */
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+}
+header div img{
+  width: auto;
+  height: 80%;
+}
+
+header nav menu{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav menu li{
+  padding: 0 0px;
+}
+header nav menu li a{
+  color: #f1faee;
+  position: relative;
+  padding: 40px 20px;
+  text-decoration: none;
+  text-align: center;
+  color:white;
+  font-size: 20px;
+  font-weight: bold; 
+}
+
+/*dropdown feature*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-Btn {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold; 
+}
+.dropdown-Content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Ensures the dropdown matches the button's width */
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+}
+.dropdown-Content a {
+  display: block; /* Ensure links stack vertically */
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-Btn, header nav menu li a:hover {color: #A30000;}
+.dropdown-Content a:hover {background-color:#F6F2F2; color: #A30000;}
+.dropdown:hover .dropdown-Content {display: block;}
+
+/*hero*/
+.hero {
+  height: 100vh;
+}
+
+.hero div{
+  /*background transparency*/
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  z-index: 2;
+/*   height:100%; */
+}
+.hero div > h1{
+  position: absolute;
+  color: #A30000 ;
+  font-size: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  top: 88%;
+}
+.hero div > a{
+  position: absolute;
+  text-decoration: none;
+  padding: 10px 90px;
+  color: white;
+  transition: font-size 0.3s;
+  text-align: center;
+  border-radius: 10px;
+  top: 95%;
+  background-color: #A30000;
+}
+
+/*For Product Pages*/
+/*Mens*/
+.heroMen {
+  display: relative;
+  height: 48vh;
+  background-image: url("../img/mens/mensbanner.avif");
+  background-attachment: fixed;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center 90px;
+  clip-path: polygon(0% 0%, 100% 0%, 95.1% 89.5%, 0% 100%);
+}
+.heroMen::before {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 40.4vh;
+  background-color: rgba(0, 0, 0, 0.3); /* Black with 50% transparency */
+  z-index: 1; /* Sits above the background but below other content */
+  pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+
+.heroMen div{
+  /*background transparency*/
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items:flex-start;
+  justify-content:left;
+  width: auto;
+}
+
+.heroMen div > h1{
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  top: 20%;
+  left: 100px;
+  z-index: 1;
+}
+
+/*Womens*/
+.heroWomen {
+  display: relative;
+  height: 48.8vh;
+  background-image: url("../img/womens/womensbanner.jpg");
+  background-attachment: fixed;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center 90px;
+  clip-path: polygon(0% 0%, 100% 0%, 95.1% 89.5%, 0% 100%);
+}
+.heroWomen::before {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 40.4vh;
+  background-color: rgba(0, 0, 0, 0.3); /* Black with 50% transparency */
+  z-index: 1; /* Sits above the background but below other content */
+  pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+
+.heroWomen div{
+  /*background transparency*/
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items:flex-start;
+  justify-content:left;
+  width: auto;
+}
+
+.heroWomen div > h1{
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  top: 20%;
+  left: 100px;
+  z-index: 1;
+}
+
+/*Collections*/
+.heroCollection {
+  display: relative;
+  height: 48.8vh;
+  background-image: url("../img/collections/collectionsbanner.png");
+  background-attachment: fixed;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center 90px;
+  clip-path: polygon(0% 0%, 100% 0%, 95.1% 89.5%, 0% 100%);
+}
+.heroCollection::before {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 40.4vh;
+  background-color: rgba(0, 0, 0, 0.3); /* Black with 50% transparency */
+  z-index: 1; /* Sits above the background but below other content */
+  pointer-events: none; /* Allows clicks to pass through the overlay */
+}
+
+.heroCollection div{
+  /*background transparency*/
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items:flex-start;
+  justify-content:left;
+  width: auto;
+}
+
+.heroCollection div > h1{
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  top: 20%;
+  left: 100px;
+  z-index: 1;
+}
+
+
+section#pg1 > h2:nth-child(1){
+  /* display: absolute; */
+  color:#D63333;
+  text-shadow: 1px 1px black;
+  font-size: 100px;
+}
+section#pg1 > div img{
+  width: 100%;
+  border-radius: 28px;
+}
+
+/*hovers*/
+.hero div > a:hover{
+  background: #4F1111;
+  font-size: 15.5px;
+}
+
+/*transitions*/
+.slide-down{
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+.slide-down:active{
+  transform: translateY(-150px);
+  opacity: 1;
+}
+.slide-right{
+  position: relative;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all .9s ease;
+}
+.slide-right.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto; /*automatically adjusting row height*/
+  gap: 20px; /* Spacing between items */
+  padding: 180px;
+}
+
+.grid-container div {
+  border: 1px solid #211E1E;
+  padding: 10px;
+  text-align: center;
+  background-color: #211E1E; /* Added background for better visibility */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.grid-container div:hover {
+  background:  #f5f5f5;
+  transform: scale(0.98);
+}
+
+.grid-container div a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+/*Collection grid*/
+.grid-container-collections{
+  display: grid;
+  grid-template-columns: 1, 1fr;
+  grid-template-rows: auto; /*automatically adjusting row height*/
+  /* gap: 20px;  Spacing between items  */
+  /* padding: 180px; */
+}
+.grid-container-collections div {
+  border: 1px solid #211E1E;
+  width: 100%;
+  text-align: center;
+  background-color: #211E1E; /* Added background for better visibility */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.grid-container-collections div:hover {
+  background:  #f5f5f5;
+  transform: scale(0.98);
+}
+.grid-container-collections > div img{
+  width: 100%;
+  height: auto;
+}
+main > section#aboutus{
+  text-align: center; /* Centers the heading */
+  padding: 20px;
+  color: white;
+}
+main > section#aboutus h2{ font-size: 80px; }
+main > section#aboutus > div > div > h3{ font-size:50px; }
+main > section#aboutus > div > div > p{ font-size: 30px;}
+
+section#pg1 > div img{
+  width: 90%;
+  border-radius: 28px;
+}
+
+footer{
+  text-align: center;
+  background-color: black;
+  padding: 12px;
+}
+footer p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+footer div img{
+  width:200px;
+}
+
+/*Mobile View*/
+@media screen and (max-width: 768px){
+   /* Header */
+  header {
+    height: 90px;
+  }
+}
