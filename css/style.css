@@ -3,7 +3,7 @@ html{
 }
 body{
   margin:0;
-  background-color: #2F2F2F;
+  background-color: #FFFDF4;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: Arial, Helvetica, sans-serif;
@@ -321,7 +321,7 @@ section#pg1 > div img{
 .grid-container div a{
   cursor: pointer;
   text-decoration: none;
-  color: white;
+  color: #FF0000;
 }
 
 /*Collection grid*/
